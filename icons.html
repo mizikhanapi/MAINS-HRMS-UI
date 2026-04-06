@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phosphor Icons Browser</title>
+
+  <!-- Phosphor web CSS -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+  />
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --border: #dfe7ef;
+      --text: #17233d;
+      --muted: #6f8199;
+      --primary: #12b8a6;
+      --primary-dark: #0ea391;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .toolbar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toolbar-left,
+    .toolbar-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search {
+      min-width: 320px;
+      flex: 1 1 360px;
+      position: relative;
+    }
+
+    .search input {
+      width: 100%;
+      height: 46px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 0 16px;
+      font-size: 0.95rem;
+      outline: none;
+      background: #fff;
+    }
+
+    .search input:focus {
+      border-color: #bcded8;
+    }
+
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .chip:hover {
+      background: #f8fafc;
+    }
+
+    .chip.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .meta-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 14px;
+    }
+
+    .icon-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 14px;
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-align: center;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .icon-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      border-color: #ccd7e3;
+    }
+
+    .icon-preview {
+      font-size: 32px;
+      line-height: 1;
+      color: var(--text);
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-name {
+      font-size: 0.87rem;
+      line-height: 1.35;
+      font-weight: 600;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .icon-class {
+      font-size: 0.78rem;
+      line-height: 1.3;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .empty-state {
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        padding: 20px 16px 32px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .search {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <h1>MAINS Icons</h1>
+      <p>
+        &nbsp;
+      </p>
+    </section>
+
+    <section class="toolbar">
+      <div class="toolbar-left">
+        <div class="search">
+          <input id="searchInput" type="text" placeholder="Search icon name..." />
+        </div>
+      </div>
+
+      <div class="toolbar-right">
+        <div class="chip-group" id="weightChips">
+          <button class="chip active" data-weight="regular" type="button">Regular</button>
+          <button class="chip" data-weight="fill" type="button">Fill</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="meta-bar">
+      <div class="meta-note" id="resultCount">0 icons</div>
+      <div class="meta-note">Click a card to copy its class</div>
+    </div>
+
+    <section id="iconGrid" class="icon-grid"></section>
+
+    <div id="emptyState" class="empty-state" style="display:none;">
+      No icons found.
+    </div>
+
+    <div class="footer-note">
+      Tip: replace the `ICONS` array with your full Phosphor icon list for a complete browser.
+    </div>
+  </div>
+
+  <script>
+    /*
+      IMPORTANT:
+      This starter file includes a useful set of icons so it works immediately.
+      To make it a true "all icons" browser, replace this array with the full
+      Phosphor kebab-case icon list from your build/export process.
+    */
+    const ICONS = [
+      "address-book",
+      "airplane",
+      "alarm",
+      "archive",
+      "arrow-left",
+      "arrow-right",
+      "article",
+      "bell",
+      "briefcase",
+      "buildings",
+      "calendar",
+      "calendar-check",
+      "calendar-x",
+      "camera",
+      "caret-down",
+      "caret-left",
+      "caret-right",
+      "caret-up",
+      "chart-bar",
+      "chart-line",
+      "check",
+      "check-circle",
+      "check-square",
+      "clipboard-text",
+      "clock",
+      "cloud",
+      "currency-circle-dollar",
+      "database",
+      "desktop",
+      "device-mobile",
+      "dots-three",
+      "download",
+      "envelope",
+      "eye",
+      "eye-slash",
+      "file",
+      "file-text",
+      "files",
+      "funnel",
+      "gear",
+      "grid-four",
+      "heart",
+      "house",
+      "identification-card",
+      "info",
+      "key",
+      "list",
+      "list-checks",
+      "magnifying-glass",
+      "map-pin",
+      "minus",
+      "notepad",
+      "paper-plane-tilt",
+      "pencil",
+      "pencil-simple",
+      "person",
+      "person-simple",
+      "phone",
+      "plus",
+      "printer",
+      "receipt",
+      "seal-check",
+      "shield-check",
+      "sign-in",
+      "sign-out",
+      "sliders",
+      "star",
+      "table",
+      "tag",
+      "trash",
+      "tray-arrow-down",
+      "tray-arrow-up",
+      "upload",
+      "user",
+      "user-circle",
+      "users",
+      "warning",
+      "x",
+      "x-circle"
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const iconGrid = document.getElementById("iconGrid");
+    const resultCount = document.getElementById("resultCount");
+    const emptyState = document.getElementById("emptyState");
+    const weightChips = document.getElementById("weightChips");
+
+    let activeWeight = "regular";
+
+    function getWeightClass(weight) {
+      switch (weight) {
+        case "thin": return "ph-thin";
+        case "light": return "ph-light";
+        case "bold": return "ph-bold";
+        case "fill": return "ph-fill";
+        case "duotone": return "ph-duotone";
+        case "regular":
+        default:
+          return "ph";
+      }
+    }
+
+    function prettyName(name) {
+      return name
+        .split("-")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    }
+
+    function renderIcons() {
+      const query = searchInput.value.trim().toLowerCase();
+      const filtered = ICONS.filter(name => name.includes(query));
+      const weightClass = getWeightClass(activeWeight);
+
+      iconGrid.innerHTML = "";
+      resultCount.textContent = `${filtered.length} icon${filtered.length !== 1 ? "s" : ""}`;
+
+      if (!filtered.length) {
+        emptyState.style.display = "block";
+        return;
+      }
+
+      emptyState.style.display = "none";
+
+      filtered.forEach(name => {
+        const fullClass = `${weightClass} ph-${name}`;
+
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "icon-card";
+        card.title = `Copy: ${fullClass}`;
+        card.innerHTML = `
+          <div class="icon-preview">
+            <i class="${fullClass}"></i>
+          </div>
+          <div class="icon-name">${prettyName(name)}</div>
+          <div class="icon-class">${fullClass}</div>
+        `;
+
+        card.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(fullClass);
+            const old = card.querySelector(".icon-class").textContent;
+            card.querySelector(".icon-class").textContent = "Copied!";
+            setTimeout(() => {
+              card.querySelector(".icon-class").textContent = old;
+            }, 900);
+          } catch {
+            alert(fullClass);
+          }
+        });
+
+        iconGrid.appendChild(card);
+      });
+    }
+
+    weightChips.addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-weight]");
+      if (!chip) return;
+
+      activeWeight = chip.dataset.weight;
+      [...weightChips.querySelectorAll(".chip")].forEach(btn => btn.classList.remove("active"));
+      chip.classList.add("active");
+      renderIcons();
+    });
+
+    searchInput.addEventListener("input", renderIcons);
+
+    renderIcons();
+  </script>
+</body>
+</html>

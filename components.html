@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAINS UI Components</title>
+  <!-- Bootstrap Core -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Phosphor web CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+</head>
+<body class="layout-app">
+  <main class="main-content w-100">
+    <header class="topbar">
+      <div class="d-flex align-items-center gap-3">
+        <h2 class="page-module-title mb-0">HRMS Components</h2>
+      </div>
+
+      <div class="topbar-actions d-flex align-items-center gap-3">
+        <button class="icon-btn position-relative" type="button">
+          <i class="ph ph-bell"></i>
+          <span class="notif-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="page-body">
+      <div class="page-container page-container--wide">
+
+        <div class="mb-5">
+          <h1 class="page-title mb-2">HRMS Components</h1>
+          <p class="page-subtitle mb-0">
+            &nbsp;
+          </p>
+        </div>
+
+        <!-- ================= BUTTONS ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Buttons</h3>
+
+          <div class="d-flex flex-wrap gap-3 mb-3">
+            <button class="btn btn-primary-custom" type="button">
+              <i class="ph ph-address-book"></i>
+              <span>Primary Button</span>
+            </button>
+
+            <button class="btn btn-filter" type="button">
+              <i class="ph ph-funnel"></i>
+              <span>Filter Button</span>
+            </button>
+
+            <button class="btn btn-outline-light-custom" type="button">
+              Secondary Button
+            </button>
+
+            <button class="btn btn-text-danger" type="button">
+              Danger Text Button
+            </button>
+
+            <button class="btn-soft-neutral" type="button">
+              <i class="ph ph-floppy"></i>
+              <span>Soft Neutral</span>
+            </button>
+
+            <button class="btn-soft-danger" type="button">
+              <i class="ph ph-x-lg"></i>
+              <span>Soft Danger</span>
+            </button>
+
+            <button class="btn-table-action" type="button">
+              <i class="ph ph-eye"></i>
+              <span>Table Action</span>
+            </button>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3">
+            <button class="icon-btn" type="button"><i class="ph ph-x-lg"></i></button>
+            <button class="icon-btn" type="button"><i class="ph ph-bell"></i></button>
+            <button class="profile-circle-btn" type="button"><i class="ph ph-person"></i></button>
+          </div>
+        </section>
+
+        <!-- ================= SEARCH / FILTER ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Search & Filters</h3>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="search-box">
+                <i class="ph ph-search"></i>
+                <input type="text" class="form-control" placeholder="Search..." />
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="search-input-pill">
+                <i class="ph ph-search"></i>
+                <input type="text" placeholder="Cari nama, no pekerja..." />
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-chip-group mt-4">
+            <button class="filter-chip active" type="button">Semua</button>
+            <button class="filter-chip" type="button">Hari Ini</button>
+            <button class="filter-chip" type="button">7 Hari</button>
+            <button class="filter-chip" type="button">30 Hari</button>
+            <button class="filter-chip" type="button">
+              <i class="ph ph-funnel"></i>
+              <span>Tapis</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= TABS ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Tabs</h3>
+
+          <div class="module-tabbar mb-4">
+            <a href="#" class="module-tab active">
+              <i class="ph ph-list-ul"></i>
+              <span>Senarai Permohonan</span>
+            </a>
+            <a href="#" class="module-tab">
+              <i class="ph ph-send"></i>
+              <span>Mohon Baharu</span>
+            </a>
+            <a href="#" class="module-tab">
+              <i class="ph ph-briefcase"></i>
+              <span>Jawatan Tersedia</span>
+            </a>
+            <a href="#" class="module-tab">
+              <i class="ph ph-arrow-counterclockwise"></i>
+              <span>Sejarah</span>
+            </a>
+          </div>
+
+          <div class="profile-pill-tabs mb-4">
+            <a href="#" class="pill-tab active">
+              <i class="ph ph-person"></i>
+              <span>Maklumat Peribadi</span>
+            </a>
+            <a href="#" class="pill-tab">
+              <i class="ph ph-people"></i>
+              <span>Maklumat Keluarga</span>
+            </a>
+            <a href="#" class="pill-tab">
+              <i class="ph ph-mortarboard"></i>
+              <span>Akademik & Kerjaya</span>
+            </a>
+          </div>
+
+          <div class="subtab-bar">
+            <div class="subtab-scroll">
+              <a href="#" class="subtab-link active">Maklumat Asas</a>
+              <a href="#" class="subtab-link">Maklumat Perhubungan</a>
+              <a href="#" class="subtab-link">Maklumat Pekerjaan</a>
+              <a href="#" class="subtab-link">Maklumat Waris</a>
+              <a href="#" class="subtab-link">Pendidikan</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= BADGES ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Badges</h3>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <span class="status-badge pending">Dalam Semakan</span>
+            <span class="status-badge approved">Diluluskan</span>
+            <span class="status-badge rejected">Ditolak</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3">
+            <span class="badge-pill blue">Baharu</span>
+            <span class="badge-pill yellow">Dalam Semakan</span>
+            <span class="badge-pill green">3 hari</span>
+            <span class="badge-pill red">11 hari</span>
+          </div>
+        </section>
+
+        <!-- ================= CARDS ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Cards</h3>
+
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 col-xl-3">
+              <div class="stat-card">
+                <div class="stat-icon blue">
+                  <i class="ph ph-file-earmark-text"></i>
+                </div>
+                <div>
+                  <div class="stat-label">Permohonan Aktif</div>
+                  <div class="stat-value">2</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+              <div class="summary-stat-card">
+                <div class="summary-stat-icon purple">
+                  <i class="ph ph-clock"></i>
+                </div>
+                <div>
+                  <div class="summary-stat-label">Hari Ini</div>
+                  <div class="summary-stat-number">5</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+              <a href="#" class="dashboard-module-card">
+                <div class="dashboard-module-icon">
+                  <i class="ph-fill ph-person"></i>
+                </div>
+                <div class="dashboard-module-title">Peribadi</div>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+              <a href="#" class="quick-action-card">
+                <div class="quick-action-icon">
+                  <i class="ph ph-pencil-square"></i>
+                </div>
+                <div class="quick-action-text">Kemaskini</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="user-card d-flex align-items-center gap-3">
+                <div class="user-avatar">
+                  <i class="ph ph-person"></i>
+                </div>
+                <div>
+                  <div class="user-name">Nurul Aisyah phnti Ahmad</div>
+                  <div class="user-role">Pegawai Kanan</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="notice-box">
+                <i class="ph ph-info-circle"></i>
+                <span>Permohonan sedang dikaji oleh JPA</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= SIDEBAR SAMPLE / STEP NAV ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Sidebar / Step Navigation</h3>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="step-panel">
+                <div class="step-panel-title">Langkah</div>
+                <nav class="step-nav">
+                  <a href="#" class="step-nav-item active"><i class="ph ph-person"></i><span>Asas</span></a>
+                  <a href="#" class="step-nav-item"><i class="ph ph-envelope"></i><span>Perhubungan</span></a>
+                  <a href="#" class="step-nav-item"><i class="ph ph-briefcase"></i><span>Pekerjaan</span></a>
+                  <a href="#" class="step-nav-item"><i class="ph ph-heart"></i><span>Waris</span></a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <aside class="sidebar position-relative h-auto">
+                <div class="sidebar-top">
+                  <div class="brand d-flex align-items-center gap-3">
+                    <div class="brand-logo">
+                      <img
+                        src="src/img/brand-logo.png"
+                        alt="HRMS Logo"
+                      />
+                    </div>
+                    <div>
+                      <h1 class="brand-title mb-0">HRMS</h1>
+                      <p class="brand-subtitle mb-0">Human Resource Management System</p>
+                    </div>
+                  </div>
+
+                  <nav class="sidebar-nav mt-4">
+                    <a href="#" class="sidebar-main-link active">
+                      <i class="ph ph-briefcase"></i>
+                      <span>Modul Perjawatan</span>
+                    </a>
+
+                    <div class="sidebar-submenu mt-3">
+                      <a href="#">Butiran Permohonan</a>
+                      <a href="#">Transaksi</a>
+                      <a href="#">Kelulusan</a>
+                      <a href="#">Pengiklanan</a>
+                    </div>
+                  </nav>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= FORM FIELDS ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Form Fields</h3>
+
+          <div class="form-card">
+            <h4 class="form-card-title">Asas</h4>
+            <div class="form-helper">Medan bertanda * adalah wajib diisi</div>
+
+            <div class="form-grid">
+              <div class="field-group">
+                <label class="field-label">Nama Penuh *</label>
+                <div class="field-readonly">Ahmad Faiz phn Abdullah</div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">No. Kad Pengenalan *</label>
+                <div class="field-readonly">880615-08-1234</div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Jantina *</label>
+                <input class="field-input" type="text" placeholder="Enter value" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Bangsa *</label>
+                <input class="field-input" type="text" placeholder="Enter value" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Agama *</label>
+                <select class="field-select">
+                  <option>Select option</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Status Perkahwinan *</label>
+                <select class="field-select">
+                  <option>Select option</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= DETAIL ITEMS ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Profile Detail Items</h3>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-2 col-md-3">
+              <div class="profile-avatar-large">
+                <i class="ph ph-person"></i>
+              </div>
+            </div>
+
+            <div class="col-lg-10 col-md-9">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="detail-item">
+                    <div class="detail-label">NAMA PENUH</div>
+                    <div class="detail-value">Ahmad Faiz phn Abdullah</div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="detail-item">
+                    <div class="detail-label">NO. KAD PENGENALAN</div>
+                    <div class="detail-value">880615-08-1234</div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="detail-item">
+                    <div class="detail-label">TARIKH LAHIR</div>
+                    <div class="detail-value detail-value--icon">
+                      <i class="ph ph-calendar3"></i>
+                      <span>15 Jun 1988</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="detail-item">
+                    <div class="detail-label">KEWARGANEGARAAN</div>
+                    <div class="detail-value">Malaysia</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= APPLICATION ITEM ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Application Item</h3>
+
+          <div class="application-list">
+            <article class="application-item">
+              <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap">
+                <div>
+                  <h4 class="job-title mb-1">Pembangun Kanan Web</h4>
+                  <div class="job-meta">Gred N41 - Jabatan Teknologi Maklumat</div>
+                </div>
+                <span class="status-badge pending">Dalam Semakan</span>
+              </div>
+
+              <div class="row g-4 mt-1">
+                <div class="col-md-5">
+                  <div class="info-label">Tarikh Permohonan</div>
+                  <div class="info-value">15 Jan 2026</div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-label">Status</div>
+                  <div class="info-value">Dalam Semakan</div>
+                </div>
+              </div>
+
+              <div class="notice-box mt-3">
+                <i class="ph ph-info-circle"></i>
+                <span>Permohonan sedang dikaji oleh JPA</span>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <button class="btn btn-outline-light-custom" type="button">Lihat Butiran</button>
+                <button class="btn btn-text-danger" type="button">Batal Permohonan</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ================= TABLE ================= -->
+        <section class="panel-card mb-4">
+          <h3 class="panel-title mb-4">Data Table</h3>
+
+          <section class="table-card">
+            <div class="table-card-title">Senarai Permohonan Kemaskini</div>
+            <div class="table-card-subtitle">Klik untuk semak dan buat keputusan</div>
+
+            <div class="data-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Nama Pekerja</th>
+                    <th>No Pekerja</th>
+                    <th>Tarikh Hantar</th>
+                    <th>Status</th>
+                    <th>SLA</th>
+                    <th>Tindakan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class>Ahmad Faiz phn Abdullah</td>
+                    <td class="table-muted d-none d-xs-block">PKJ2020-00123</td>
+                    <td class="table-muted">18 Feb 2026</td>
+                    <td><span class="badge-pill blue">Baharu</span></td>
+                    <td><span class="badge-pill green">3 hari</span></td>
+                    <td>
+                      <button class="btn-table-action" type="button">
+                        <i class="ph ph-eye"></i>
+                        <span>Semak</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Siti Aminah phnti Yusof</td>
+                    <td class="table-muted">PKJ2019-00456</td>
+                    <td class="table-muted">15 Feb 2026</td>
+                    <td><span class="badge-pill yellow">Dalam Semakan</span></td>
+                    <td><span class="badge-pill red">11 hari</span></td>
+                    <td>
+                      <button class="btn-table-action" type="button">
+                        <i class="ph ph-eye"></i>
+                        <span>Semak</span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= ACTION BAR ================= -->
+        <section class="panel-card">
+          <h3 class="panel-title mb-4">Action Bar</h3>
+
+          <div class="action-bar">
+            <div class="action-bar-note">
+              Pastikan semua maklumat adalah<br />
+              tepat sebelum dihantar
+            </div>
+
+            <div class="action-bar-buttons">
+              <button class="btn-soft-danger" type="button">
+                <i class="ph ph-x-lg"></i>
+                <span>Batal</span>
+              </button>
+
+              <button class="btn-soft-neutral" type="button">
+                <i class="ph ph-floppy"></i>
+                <span>Simpan Draf</span>
+              </button>
+
+              <button class="btn btn-primary-custom" type="button">
+                <i class="ph ph-send"></i>
+                <span>Hantar Untuk Semakan</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
