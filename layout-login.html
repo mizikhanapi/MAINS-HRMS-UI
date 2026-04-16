@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HRMS Login</title>
+  <!-- Bootstrap Core -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Phosphor web CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+</head>
+<body class="bg-light">
+
+<div class="container-fluid min-vh-100">
+  <div class="row min-vh-100">
+
+    <!-- LEFT PANEL -->
+    <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center login-left">
+      <div class="text-white px-5 w-100" style="max-width:520px;">
+
+        <!-- Logo -->
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="src/img/brand-logo-jawi.png" alt="MAINS Logo" />
+        </div>
+
+        <!-- Title -->
+        <h1 class="fw-bold display-5 mb-2">Selamat Datang!</h1>
+        <p class="mb-5 opacity-75">
+          ke Portal Majlis Agama Islam Negeri Sembilan
+        </p>
+
+        <!-- Features -->
+        <div class="d-flex flex-column gap-4">
+
+          <div class="d-flex gap-3">
+            <div class="feature-icon"><i class="ph ph-users"></i></div>
+            <div>
+              <div class="fw-semibold">Pengurusan Staf</div>
+              <div class="small opacity-75">Urus maklumat pekerja dengan mudah</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="feature-icon"><i class="ph ph-calendar"></i></div>
+            <div>
+              <div class="fw-semibold">Cuti & Kehadiran</div>
+              <div class="small opacity-75">Pantau kehadiran secara real-time</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="feature-icon"><i class="ph ph-chart-line"></i></div>
+            <div>
+              <div class="fw-semibold">Laporan Prestasi</div>
+              <div class="small opacity-75">Analisis data dengan komprehensif</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="feature-icon"><i class="ph ph-list-checks"></i></div>
+            <div>
+              <div class="fw-semibold">Latihan & Kursus</div>
+              <div class="small opacity-75">Tingkatkan kemahiran pekerja</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+
+      <div class="w-100 px-4" style="max-width:420px;">
+
+        <!-- Header -->
+        <div class="text-center mb-4">
+          <h2 class="fw-bold mb-2">Log Masuk</h2>
+          <p class="text-muted mb-0">Masukkan butiran anda untuk meneruskan</p>
+        </div>
+
+        <!-- Card -->
+        <div class="card border-0 shadow-lg rounded-4 p-4 login-card">
+
+          <form>
+            <!-- Username -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Nama Pengguna</label>
+              <input type="text" class="form-control form-control-lg rounded-pill" placeholder="Masukkan nama pengguna">
+            </div>
+
+            <!-- Password -->
+            <div class="mb-4 position-relative">
+              <label class="form-label fw-semibold">Kata Laluan</label>
+
+              <input type="password" class="form-control form-control-lg rounded-pill pe-5" placeholder="Masukkan kata laluan">
+
+              <button type="button" class="btn btn-sm position-absolute end-0 top-50 translate-middle-y me-3 text-muted border-0 bg-transparent">
+                <i class="ph ph-eye"></i>
+              </button>
+            </div>
+
+            <!-- Submit -->
+            <button class="btn w-100 login-btn text-white fw-semibold py-3 mb-3">
+              Log Masuk Sekarang ✨
+            </button>
+
+            <!-- Footer -->
+            <div class="text-center small text-muted pt-3 border-top">
+              Lupa kata laluan?
+              <a href="#" class="fw-semibold text-decoration-underline">Reset Password</a>
+            </div>
+          </form>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center small text-muted mt-4">
+          © 2026 Portal MAINS. Hak cipta terpelihara.
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
